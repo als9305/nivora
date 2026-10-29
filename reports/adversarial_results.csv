@@ -1,0 +1,3 @@
+Model,Clean_Acc,FGSM_Acc,BIM_Acc,PGD_Acc,Clean_AUC,PGD_AUC
+Baseline ResNeXt50,0.5571,0.5357,0.5357,0.5214,1.0,0.5432
+Full DeepQShield (LWE+Fusion+Attn),1.0,0.6429,0.6143,0.6071,1.0,0.9481

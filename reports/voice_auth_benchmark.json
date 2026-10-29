@@ -1,0 +1,46 @@
+{
+  "module": "Module 4 \u2014 Voice Authentication & Audio Anti-Spoofing",
+  "timestamp": "2026-09-21 21:15:29",
+  "pad_model_info": {
+    "model_name": "Domain-Adapted ASVspoof PAD Model (v3 Multi-Source Balanced)",
+    "weights_loaded": true,
+    "weight_source": "D:\\projects\\DeepGuard\\models\\trained_pad_model_v3.pt",
+    "license": "Creative Commons Attribution 4.0 / Open Data"
+  },
+  "pad_dataset_provenance": {
+    "datasets": [
+      "DynamicSuperb/SpoofDetection_ASVspoof2017 (Physical Replay)",
+      "DynamicSuperb/SpoofDetection_ASVspoof2015 (Synthetic TTS & Voice Conversion)",
+      "OpenSLR Mini-LibriSpeech (dev-clean-2) (Bona Fide Human Speech)"
+    ],
+    "license": "Creative Commons Attribution 4.0 International / Open Data",
+    "attack_categories": [
+      "BONAFIDE",
+      "REPLAY_ATTACK",
+      "SYNTHETIC_TTS",
+      "VOICE_CLONE"
+    ]
+  },
+  "speaker_verification_test_metrics": {
+    "far_speaker": 1.0,
+    "frr_speaker": 0.0,
+    "eer_speaker": 0.1997
+  },
+  "pad_held_out_test_metrics": {
+    "total_bonafide_samples": 17,
+    "total_attack_samples": 224,
+    "bpcer": 0.2941,
+    "overall_apcer": 0.1429,
+    "acer": 0.2185,
+    "per_attack_apcer": {
+      "REPLAY_ATTACK": 0.0909,
+      "SYNTHETIC_TTS": 0.2759,
+      "VOICE_CLONE": 0.1071
+    },
+    "pad_eer": 0.2404,
+    "pad_roc_auc": 0.8472,
+    "cpu_latency_ms": 114.68
+  },
+  "phrase_match_status": "UNVALIDATED",
+  "scientific_validation_statement": "Software implementation verified; biometric generalization not yet scientifically established."
+}

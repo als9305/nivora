@@ -1,0 +1,27 @@
+{
+  "model": "InceptionResnetV1_VGGFace2",
+  "embedding_dim": 512,
+  "calibration_split": {
+    "dev_genuine_pairs": 321,
+    "dev_impostor_pairs": 175,
+    "dev_genuine_mean": 0.9457,
+    "dev_impostor_mean": 0.1151,
+    "dev_eer_threshold_tau": 0.8621
+  },
+  "held_out_test_split": {
+    "test_genuine_pairs": 328,
+    "test_impostor_pairs": 200,
+    "test_genuine_similarity_mean": 0.6435,
+    "test_impostor_similarity_mean": 0.2714
+  },
+  "metrics_at_production_tau": {
+    "production_tau": 0.65,
+    "accuracy": 0.7045,
+    "precision": 1.0,
+    "recall": 0.5244,
+    "f1_score": 0.688,
+    "roc_auc": 0.8391,
+    "eer": 0.32,
+    "tar_at_far_0.01": 0.5335
+  }
+}

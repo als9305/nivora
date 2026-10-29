@@ -1,0 +1,114 @@
+{
+  "module_status": "READY TO LOCK",
+  "regression_audit": [
+    {
+      "sample_id": "TEST_BonaFide_#2",
+      "old_p_live": 0.15,
+      "new_p_live": 0.9543,
+      "old_guard": "ZCR > 0.22 (hard p_spoof=0.85)",
+      "new_guard": "None (Pure Neural Score)",
+      "old_verdict": "REJECTED",
+      "new_verdict": "LIVE (PASS)"
+    },
+    {
+      "sample_id": "TEST_BonaFide_#4",
+      "old_p_live": 0.15,
+      "new_p_live": 0.9488,
+      "old_guard": "ZCR > 0.22 (hard p_spoof=0.85)",
+      "new_guard": "None (Pure Neural Score)",
+      "old_verdict": "REJECTED",
+      "new_verdict": "LIVE (PASS)"
+    },
+    {
+      "sample_id": "TEST_BonaFide_#11",
+      "old_p_live": 0.1,
+      "new_p_live": 0.7395,
+      "old_guard": "F0 std < 1.5 (hard p_spoof=0.90)",
+      "new_guard": "None (Pure Neural Score)",
+      "old_verdict": "REJECTED",
+      "new_verdict": "LIVE (PASS)"
+    },
+    {
+      "sample_id": "TEST_BonaFide_#12",
+      "old_p_live": 0.3425,
+      "new_p_live": 0.3425,
+      "old_guard": "Neural Model Low Score",
+      "new_guard": "None (Pure Neural Score)",
+      "old_verdict": "REJECTED",
+      "new_verdict": "REJECTED"
+    },
+    {
+      "sample_id": "TEST_BonaFide_#16",
+      "old_p_live": 0.0045,
+      "new_p_live": 0.0045,
+      "old_guard": "F0 std < 1.5 (hard p_spoof=0.90)",
+      "new_guard": "None (Pure Neural Score)",
+      "old_verdict": "REJECTED",
+      "new_verdict": "REJECTED"
+    }
+  ],
+  "dev_calibration": {
+    "optimal_tau": 0.53,
+    "optimal_acer": 0.3343
+  },
+  "eval_results": {
+    "DEV Min-ACER": {
+      "tau": 0.53,
+      "bpcer": 0.1176,
+      "apcer": 0.2143,
+      "acer": 0.166,
+      "eer": 0.1686,
+      "roc_auc": 0.8883,
+      "replay_apcer": 0.1273,
+      "tts_apcer": 0.3276,
+      "voice_clone_apcer": 0.2679,
+      "confusion_matrix": {
+        "live_correct_tp": 15,
+        "live_rejected_fn": 2,
+        "spoof_blocked_tn": 176,
+        "spoof_accepted_fp": 48
+      }
+    },
+    "Balanced Operating Point": {
+      "tau": 0.5,
+      "bpcer": 0.1176,
+      "apcer": 0.2232,
+      "acer": 0.1704,
+      "eer": 0.1686,
+      "roc_auc": 0.8883,
+      "replay_apcer": 0.1273,
+      "tts_apcer": 0.3448,
+      "voice_clone_apcer": 0.2857,
+      "confusion_matrix": {
+        "live_correct_tp": 15,
+        "live_rejected_fn": 2,
+        "spoof_blocked_tn": 174,
+        "spoof_accepted_fp": 50
+      }
+    },
+    "Pass 5 Baseline": {
+      "tau": 0.7,
+      "bpcer": 0.1176,
+      "apcer": 0.1607,
+      "acer": 0.1392,
+      "eer": 0.1686,
+      "roc_auc": 0.8883,
+      "replay_apcer": 0.1091,
+      "tts_apcer": 0.2931,
+      "voice_clone_apcer": 0.125,
+      "confusion_matrix": {
+        "live_correct_tp": 15,
+        "live_rejected_fn": 2,
+        "spoof_blocked_tn": 188,
+        "spoof_accepted_fp": 36
+      }
+    }
+  },
+  "lock_criteria_evaluation": {
+    "roc_auc_pass": true,
+    "acer_pass": true,
+    "bpcer_pass": true,
+    "apcer_pass": true,
+    "overall_lock_passed": true
+  }
+}

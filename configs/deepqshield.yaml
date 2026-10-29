@@ -1,0 +1,50 @@
+# DeepQShield Model & System Configuration (Exact Paper Specification)
+model:
+  name: "DeepQShield"
+  version: "1.0.0"
+  architecture: "ResNeXt50_32x4d + TWO LWE Lattice Layers (256-dim) + Feature Fusion + Attention"
+  input_size: [224, 224]
+  num_classes: 2  # 0: REAL, 1: DEEPFAKE
+  dropout_rate: 0.3
+  pretrained: true
+
+backbone:
+  type: "resnext50_32x4d"
+  feature_dim: 2048
+
+lwe:
+  lattice_dim: 256
+  lattice_layers: 2
+  noise_std: 0.1
+  trainable_perturbation: true
+  seed: 42
+
+fusion:
+  strategy: "concatenation_projection"
+  fused_dim: 2048
+
+attention:
+  type: "spatial_channel"
+  reduction_ratio: 16
+
+training:
+  batch_size: 32
+  learning_rate: 0.0001 # 1e-4
+  weight_decay: 0.0001
+  epochs: 50
+  focal_loss_gamma: 2.0
+  focal_loss_alpha: 2.0
+  label_smoothing: 0.1
+  optimizer: "AdamW"
+  scheduler: "CosineAnnealingWarmRestarts"
+  T_0: 10
+  T_mult: 2
+  eta_min: 0.000001 # 1e-6
+  seed: 42
+
+adversarial:
+  epsilon: 0.0313725 # 8/255
+  alpha: 0.0078431   # 2/255
+  pgd_steps: 10
+  fgsm_epsilon: 0.0313725
+  bim_steps: 10

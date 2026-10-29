@@ -1,0 +1,5 @@
+Configuration,Accuracy,Precision,Recall,F1_Score,ROC_AUC,Inference_Latency_ms
+A. Baseline ResNeXt50,0.5571,0.5474,1.0,0.7075,1.0,42.83
+B. ResNeXt + LWE,0.6429,0.6,1.0,0.75,1.0,41.63
+C. ResNeXt + LWE + Fusion,1.0,1.0,1.0,1.0,1.0,42.1
+D. Full DeepQShield (Backbone+LWE+Fusion+Attention),1.0,1.0,1.0,1.0,1.0,42.09

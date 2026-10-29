@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# Node / React
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Logs & Storage
+*.log
+scratch/temp/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+data/librispeech_cache/
+checkpoints/*.pth
+models/*.ckpt
+backend/.venv-ml/
+backend/.venv-ml/
+.venv/
+venv/
+__pycache__/
+node_modules/

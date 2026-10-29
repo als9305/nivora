@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepguard"
+version = "1.0.0"
+description = "DeepQShield Deepfake-Resilient Multi-Modal Security Subsystem for DeepGuard / Nivora"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.22.0",
+    "pydantic>=2.0.0",
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "opencv-python-headless>=4.8.0",
+    "numpy>=1.24.0",
+    "pillow>=9.5.0",
+    "scipy>=1.10.0",
+    "scikit-learn>=1.2.0",
+    "matplotlib>=3.7.0",
+    "pandas>=2.0.0",
+    "pyyaml>=6.0",
+    "pycryptodome>=3.18.0",
+    "timm>=0.9.0",
+    "albumentations>=1.3.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "httpx>=0.24.1",
+    "ruff>=0.1.0",
+    "black>=23.0.0"
+]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+    "backend/tests"
+]
+pythonpath = [
+    "backend",
+    "."
+]
+
+[tool.ruff]
+line-length = 120
+select = ["E", "F", "W", "I"]
+ignore = ["E501"]
+
+[tool.black]
+line-length = 120

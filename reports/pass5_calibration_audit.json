@@ -1,0 +1,137 @@
+{
+  "module_status": "UNLOCKED",
+  "false_rejects_audit": [
+    {
+      "index": 2,
+      "duration_sec": 3.13,
+      "rms_energy": 0.0353,
+      "clipping_ratio": 0.0,
+      "f0_mean_hz": 140.4,
+      "f0_std_hz": 75.48,
+      "high_freq_ratio": 0.0186,
+      "zero_crossing_rate": 0.2286,
+      "spectral_centroid_hz": 2439.0,
+      "p_live": 0.15,
+      "verdict_tau_070": "REJECTED_SPOOF"
+    },
+    {
+      "index": 4,
+      "duration_sec": 3.442,
+      "rms_energy": 0.045,
+      "clipping_ratio": 0.0001,
+      "f0_mean_hz": 144.3,
+      "f0_std_hz": 64.81,
+      "high_freq_ratio": 0.0237,
+      "zero_crossing_rate": 0.2212,
+      "spectral_centroid_hz": 2349.9,
+      "p_live": 0.15,
+      "verdict_tau_070": "REJECTED_SPOOF"
+    },
+    {
+      "index": 11,
+      "duration_sec": 6.661,
+      "rms_energy": 0.1484,
+      "clipping_ratio": 0.0,
+      "f0_mean_hz": 400.0,
+      "f0_std_hz": 0.0,
+      "high_freq_ratio": 0.0093,
+      "zero_crossing_rate": 0.0831,
+      "spectral_centroid_hz": 1073.4,
+      "p_live": 0.1,
+      "verdict_tau_070": "REJECTED_SPOOF"
+    },
+    {
+      "index": 12,
+      "duration_sec": 3.972,
+      "rms_energy": 0.1243,
+      "clipping_ratio": 0.0,
+      "f0_mean_hz": 195.9,
+      "f0_std_hz": 113.97,
+      "high_freq_ratio": 0.0192,
+      "zero_crossing_rate": 0.0855,
+      "spectral_centroid_hz": 1086.2,
+      "p_live": 0.3425,
+      "verdict_tau_070": "REJECTED_SPOOF"
+    },
+    {
+      "index": 16,
+      "duration_sec": 5.893,
+      "rms_energy": 0.1124,
+      "clipping_ratio": 0.0,
+      "f0_mean_hz": 400.0,
+      "f0_std_hz": 0.0,
+      "high_freq_ratio": 0.002,
+      "zero_crossing_rate": 0.0486,
+      "spectral_centroid_hz": 744.4,
+      "p_live": 0.0045,
+      "verdict_tau_070": "REJECTED_SPOOF"
+    }
+  ],
+  "dev_calibration": {
+    "optimal_tau": 0.53,
+    "optimal_acer": 0.3443,
+    "tau_apcer_10": 0.73,
+    "tau_apcer_15": 0.53,
+    "tau_apcer_20": 0.435
+  },
+  "eval_results": {
+    "DEV Min-ACER": {
+      "tau": 0.53,
+      "bpcer": 0.2941,
+      "apcer": 0.192,
+      "acer": 0.243,
+      "eer": 0.2404,
+      "roc_auc": 0.8472,
+      "replay_apcer": 0.1091,
+      "tts_apcer": 0.3103,
+      "voice_clone_apcer": 0.2321,
+      "confusion_matrix": {
+        "live_correct_tp": 12,
+        "live_rejected_fn": 5,
+        "spoof_blocked_tn": 181,
+        "spoof_accepted_fp": 43
+      }
+    },
+    "Pass 4 Baseline": {
+      "tau": 0.7,
+      "bpcer": 0.2941,
+      "apcer": 0.1429,
+      "acer": 0.2185,
+      "eer": 0.2404,
+      "roc_auc": 0.8472,
+      "replay_apcer": 0.0909,
+      "tts_apcer": 0.2759,
+      "voice_clone_apcer": 0.1071,
+      "confusion_matrix": {
+        "live_correct_tp": 12,
+        "live_rejected_fn": 5,
+        "spoof_blocked_tn": 192,
+        "spoof_accepted_fp": 32
+      }
+    },
+    "DEV APCER<=20%": {
+      "tau": 0.435,
+      "bpcer": 0.2941,
+      "apcer": 0.2188,
+      "acer": 0.2564,
+      "eer": 0.2404,
+      "roc_auc": 0.8472,
+      "replay_apcer": 0.1273,
+      "tts_apcer": 0.3276,
+      "voice_clone_apcer": 0.2857,
+      "confusion_matrix": {
+        "live_correct_tp": 12,
+        "live_rejected_fn": 5,
+        "spoof_blocked_tn": 175,
+        "spoof_accepted_fp": 49
+      }
+    }
+  },
+  "lock_criteria_evaluation": {
+    "roc_auc_pass": true,
+    "acer_pass": false,
+    "bpcer_pass": false,
+    "apcer_pass": true,
+    "overall_lock_passed": false
+  }
+}

@@ -1,0 +1,5 @@
+Stage,Batch_Size,Mean_Frame_Latency_ms,Frames_Per_Second,Memory_Peak_MB
+A. Baseline ResNeXt50,32,42.83,23.3,180.5
+B. ResNeXt + LWE,32,41.63,24.0,180.5
+C. ResNeXt + LWE + Fusion,32,42.1,23.8,180.5
+D. Full DeepQShield (Backbone+LWE+Fusion+Attention),32,42.09,23.8,180.5

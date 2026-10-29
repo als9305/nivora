@@ -1,0 +1,19 @@
+# Post-Quantum Cryptography & Audit Security Configuration (Exact Paper Specification)
+pqc:
+  algorithm_kem: "Kyber1024"      # NIST Level 5 PQC Key Encapsulation Mechanism
+  algorithm_sig: "Dilithium5"     # NIST Level 5 PQC Digital Signature Algorithm
+  hash_algorithm: "SHA3-256"      # SHA-3 cryptographic hash for evidence digest
+  provider_mode: "auto"
+  key_rotation_days: 90
+  token_ttl_seconds: 3600
+
+session:
+  max_live_frames: 100
+  session_timeout_seconds: 120
+  cleanup_interval_seconds: 300
+
+privacy:
+  transient_media_processing: true
+  store_raw_video: false
+  store_raw_audio: false
+  retention_days: 30

@@ -1,0 +1,12 @@
+# Production Inference Service Configuration
+inference:
+  device: "auto" # "cuda", "cpu", or "auto"
+  batch_size: 16
+  max_video_frames: 60
+  sample_fps: 5
+  genuine_threshold: 0.60
+  fake_threshold: 0.65
+  # Scores strictly between the genuine and fake thresholds are retried.
+  confidence_margin: 0.05
+  default_checkpoint: "checkpoints/deepqshield_best.pth"
+  enable_pqc_signing: true
